@@ -8,7 +8,7 @@ const Item = require('../../model/item');
 //@desc Get All Items;
 //@aaccess Public;
 router.get('/',(req,res)=>{
-    Item.find()
+    Item.find()     
         .sort({date:-1})
         .then(items=> res.json(items));
 });
